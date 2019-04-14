@@ -59,10 +59,9 @@ public class desafios4all {
         navegador.findElement(By.id("cart-btn")).click();
 
         //aumentar a quantidade de brigadeiro em 4, clicar 4x em adicionar id="add-product-4-qtd
-        navegador.findElement(By.id("add-product-4-qtd")).click();
-        navegador.findElement(By.id("add-product-4-qtd")).click();
-        navegador.findElement(By.id("add-product-4-qtd")).click();
-        navegador.findElement(By.id("add-product-4-qtd")).click();
+        for (int count=1 ; count <5 ; count++){
+            navegador.findElement(By.id("add-product-4-qtd")).click();
+        }
         ScreenShot.captura(navegador, "C:\\Users\\Maureen Souza\\4all\\ScreenShots\\Desafio1\\" + Generator.dataHoraParaArquivo() + "brigadeiros.png");
 
         //clicar em finalizar compra id="finish-checkout-button"
